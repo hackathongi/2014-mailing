@@ -1,0 +1,550 @@
+/* general */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 14px/1.6 "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #666;
+}
+
+h1, h2, h3 {
+  margin: 5px 0;
+  font-weight: normal;
+  color: #353535;
+  -webkit-font-smoothing: antialiased;
+}
+
+p em {
+  font-weight: bold;
+  font-style: normal;
+  color: #353535;
+}
+
+p {
+  margin: 20px 0;
+}
+
+strong {
+  color: #353535;
+}
+
+.inner {
+  margin-top: 100px;
+}
+
+#content {
+  margin-left: 80px;
+  width: 900px;
+  margin-bottom: 80px;
+}
+
+li code {
+  color: #353535;
+}
+
+section section p {
+  width: 60%;
+}
+
+h2 {
+  margin-top: 80px;
+  font-weight: bold;
+}
+
+h3 {
+  background: url(images/hr.png) top center no-repeat;
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* links */
+
+a {
+  color: #259dff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:target {
+  padding-top: 100px;
+}
+
+nav a {
+  font-size: 12px;
+  color: #7B838A;
+}
+
+/* logo */
+
+#logo {
+  margin-top: 180px;
+  margin-bottom: 180px;
+  margin-left: 80px;
+  padding-left: 40px;
+  width: 440px;
+  border-left: 1px dotted #eee;
+  -webkit-font-smoothing: antialiased;
+}
+
+#logo .express {
+  display: block;
+  font: 400 60px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #353535;
+  width: 100%;
+}
+
+#logo .description {
+  position: relative;
+  top: -5px;
+  font: 100 60px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #cecece;
+  line-height: .75;
+}
+
+#logo em {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 9px;
+  color: #999;
+  margin-left: 5px;
+}
+
+#logo a {
+  color: #cecece;
+}
+
+#logo a:hover {
+  text-decoration: none;
+  color: #858585;
+}
+
+/* secondary page logo */
+
+.inner header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.9);
+  width: 100%;
+  height: 55px;
+  z-index: 100;
+}
+
+.inner.scroll header {
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 4px #eee;
+}
+
+.inner #logo {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 10px 25px;
+  width: auto;
+  border-left: none;
+}
+
+.inner #logo .express {
+  font-size: 25px;
+}
+
+.inner #logo em {
+  display: none;
+}
+
+.inner .description {
+  display: none;
+}
+
+/* code */
+
+p code {
+  background: #efefef;
+  border: 1px solid #eaeaea;
+  font-family: monaco, monospace;
+  font-size: .75em;
+  padding: 2px 8px;
+  -webkit-border-radius: 3px;
+}
+
+pre {
+  color: #353535;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 20px 0;
+  padding: 20px;
+  background: white;
+  border: 1px solid #e7e7e7;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 1px 3px 0 #eee;
+  -webkit-border-radius: 3px;
+}
+
+pre code {
+  font-family: monaco, monospace;
+  font-size: .8em;
+}
+
+code .comment { color: #888 }
+code .init { color: #2F6FAD }
+code .string { color: #5890AD }
+code .keyword { color: #8A6343 }
+code .number { color: #2F6FAD }
+
+/* top button */
+
+.scroll #top {
+  opacity: .2;
+}
+
+#top {
+  line-height: 0;
+  background: black;
+  -webkit-border-radius: 2px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  -webkit-transition: opacity 300ms;
+}
+
+#top:hover {
+  opacity: 1;
+}
+
+#top img {
+  width: 8px;
+  height: 5px;
+}
+
+/* navigation */
+
+nav {
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  z-index: 100;
+}
+
+nav a {
+  margin: 0 5px;
+  padding-right: 15px;
+  border-right: 1px dotted #eee;
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: #353535;
+}
+
+/* clearfix */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+/* boxes */
+
+#boxes {
+  background: url(images/hr.png) top center no-repeat;
+  margin-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 12px;
+}
+
+.inner #boxes {
+  font-size: 13px;
+}
+
+#boxes section {
+  width: 180px;
+  margin: 0 25px;
+  float: left;
+  /* fix grid jank. #105 */
+  min-height: 200px;
+}
+
+#boxes h3 {
+  background: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#boxes section p {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* secondary menu */
+
+#menu {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 105px;
+  right: 30px;
+  height: 500px;
+  text-align: right;
+  font-size: 13px;
+}
+
+#menu li {
+  list-style: none;
+}
+
+#menu ul {
+  height: 0;
+  overflow-y: hidden;
+}
+
+#menu ul.active {
+  height: auto;
+}
+
+#menu > li > a {
+  color: #353535;
+  font-weight: bold;
+}
+
+#menu ul a {
+  color: #7B838A;
+}
+
+#menu ul a.active {
+  color: #259dff;
+}
+
+/* applications page */
+
+.application h2 {
+  margin: 0;
+}
+
+.application {
+  background: url(images/hr.png) top center no-repeat;
+  padding: 80px 0;
+  height: 600px;
+  position: relative;
+}
+
+.application p {
+  float: left;
+  width: 30%;
+}
+
+.application img {
+  float: right;
+}
+
+.application .link {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.application .link a {
+  margin-left: 4px;
+}
+
+/* ipad landscape */
+
+@media all and (max-width: 1200px) {
+  #content {
+    width: 760px;
+  }
+
+  .applications #content,
+  .community #content {
+    width: 900px;
+  }
+}
+
+/* ipad portrait */
+
+@media all and (max-width: 768px) {
+  #content {
+    width: 500px;
+  }
+
+  .applications #content,
+  .community #content {
+    width: 600px;
+  }
+
+  .application img {
+    width: 60%;
+  }
+
+  .application {
+    height: 450px;
+  }
+
+  #boxes {
+    margin-left: 0;
+  }
+
+  #boxes section {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    /* undo grid jank */
+    min-height: 0;
+  }
+}
+
+/* iphone portrait */
+
+@media all and (max-width: 650px) {
+  #logo {
+    margin-left: 0;
+  }
+
+  #content {
+    width: 380px;
+  }
+
+  .applications #content,
+  .community #content {
+    width: 500px;
+  }
+
+  section section p {
+    width: 100%;
+  }
+
+  .application {
+    height: 380px;
+  }
+
+  .application img {
+    width: 60%;
+  }
+}
+
+/* tmp */
+
+#logos, footer {
+  display: none;
+}
+
+#book {
+  position: relative;
+}
+
+#book img {
+  position: absolute;
+  top: 0;
+  right: -110px;
+  width: 50%;
+}<!DOCTYPE html>
+<!-- saved from url=(0029)http://expressjs.com/faq.html -->
+<html class="onload"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Express - faq</title><link rel="stylesheet" href="http://expressjs.com/style.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext"><script type="text/javascript" async="" src="./faq_files/ga.js"></script><script src="./faq_files/jquery.min.js"></script><script src="./faq_files/app.js"></script><script src="./faq_files/retina.js"></script></head><body class="inner"><div class="bar"></div><section id="content"><header><section id="logo"><a href="http://expressjs.com/" class="express">express<em>3.0.0</em></a><span class="description">web application framework for<a href="http://nodejs.org/"> node</a></span></section><nav class="clearfix"><a href="http://expressjs.com/" class="">Home</a><a href="http://expressjs.com/api.html" class="">API Reference</a><a href="http://expressjs.com/guide.html" class="">Guide</a><a href="http://expressjs.com/applications.html" class="">Applications</a><a href="http://expressjs.com/community.html" class="">Community</a><a href="./faq_files/faq.html" class="active">FAQ</a></nav></header><div id="faq"><section><h3 id="models">How do I define models?</h3><p>Express has no notion of a database at all, this is
+left up to third-party node modules - allowing you to
+interface with nearly any database.
+</p></section><section><h3 id="auth">How can I authenticate users?</h3><p>This is another opinionated area that Express does not
+venture into, you may use any authentication scheme you wish.
+For a simple username / password scheme view this <a href="https://github.com/visionmedia/express/tree/master/examples/auth">example</a>.
+</p></section><section><h3 id="templates">Which template engines does Express support?</h3><p>Anything that can conform with the <code>(path, locals, callback)</code> signature.
+To normalize template engine interfaces and caching it's recommended to
+check the <a href="https://github.com/visionmedia/consolidate.js">consolidate.js</a>
+project for support. Unlisted template engines may still support the Express
+signature.
+</p></section><section><h3 id="structure">How should I structure my application?</h3><p>There is no true answer to this question, it is highly dependant
+on the scale of your application and the team involved. To be as
+flexible as possible Express makes no assumptions in terms of structure.
+</p><p>Routes and other application-specific logic may live in as many files
+as you wish, in any directory structure you prefer. View the following
+examples for inspiration:
+</p><ul><li><a href="https://github.com/visionmedia/express/blob/master/examples/route-separation/index.js#L19">Route listings</a></li><li><a href="https://github.com/visionmedia/express/blob/master/examples/route-map/index.js#L47">Route map</a></li><li><a href="https://github.com/visionmedia/express/tree/master/examples/route-loading">Route bootstrapping</a></li><li><a href="https://github.com/visionmedia/express/tree/master/examples/mvc">MVC style controllers</a></li></ul><p>Available as well are third-party extensions to Express to simplify some of these patterns:
+</p><ul><li><a href="https://github.com/visionmedia/express-resource">Resourceful routing</a></li><li><a href="https://github.com/visionmedia/express-namespace">Namespaced routing</a></li></ul></section><section><h3 id="multiple-statics">How can I serve statics from several directories?</h3><p>You may typically use any middleware several times 
+within your application. With the following middleware setup and a request
+to "GET /javascripts/jquery.js" would first check "./public/javascripts/jquery.js",
+if it does not exist then the subsequent middleware will check "./files/javascripts/jquery.js".
+</p><pre class="js"><code>app.use(express.static(<span class="string">'public'</span>));
+app.use(express.static(<span class="string">'files'</span>));
+</code></pre></section><setup><h3 id="static-prefix">How can I prefix a pathname for serving statics?</h3><p>Connect's generic "mounting" feature allows you to define
+the pathname "prefix" to which the middleware will be invoked,
+effectively behaving as if that prefix string was never
+part of the path. Suppose if you wanted "GET /files/javascripts/jquery.js",
+you could mount the middleware at "/files", exposing "/javascripts/jquery.js"
+as the <code>req.url</code> allowing the middleware to serve the file:
+</p><pre class="js"><code>app.use(<span class="string">'/public'</span>, express.static(<span class="string">'public'</span>));
+</code></pre></setup><setup><h3 id="migration">How do I migrate my Express 2.x application?</h3><p>Express 2x will likely be supported through to node 1.0 so there's
+no immediate reason to update beyond the refactoring and API changes
+that Express 3x introduces, so if you're happy with 2x feel free
+to remain on that branch. For migration information visit the
+<a href="https://github.com/visionmedia/express/wiki/Migrating-from-2.x-to-3.x">migration</a>
+wiki page, or view a <a href="https://github.com/visionmedia/express/wiki/New-features-in-3.x">list of changes</a> made in 3.x.
+</p></setup><setup><h3 id="404-handling">How do you handle 404s?</h3><p>In Express 404s are not the result of an error, thus the
+error-handler middleware will not capture 404s, this is
+because a 404 is simply the absence of additional work to do,
+in other words Express has executed all middleware / routes
+and found that none of them responded. All you need to
+do is add a middleware at the very bottom below all the others
+to handle a 404:
+</p><pre class="js"><code>app.use(<span class="keyword">function</span>(req, res, next){
+  res.send(<span class="number">404</span>, <span class="string">'Sorry cant find that!'</span>);
+});
+</code></pre></setup><setup><h3 id="error-handling">How do you setup an error handler in Express?</h3><p>Error-handling middleware are defined just like regular middleware,
+however must be define with an arity of 4, that is the signature
+<code>(err, req, res, next)</code>:
+</p><pre class="js"><code>app.use(<span class="keyword">function</span>(err, req, res, next){
+  console.error(err.stack);
+  res.send(<span class="number">500</span>, <span class="string">'Something broke!'</span>);
+});
+</code></pre><p>View <a href="http://expressjs.com/guide.html#error-handling">error-handling</a> for more information.
+</p></setup><setup><h3 id="render-html">How do I render plain HTML?</h3><p>You don't! There's no need to "render" HTML with <code>res.render()</code>,
+if you have a specific file you should use <code>res.sendfile()</code>, or
+if you are serving many assets from a directory use the <code>express.static()</code>
+middleware.
+</p></setup><setup><h3 id="size">How big is the Express codebase?</h3><p>Express is a very small framework, the 3.0.0 release is only
+932 SLOC, and the mandatory portion of Connect which Express
+is built on is only 267 SLOC. The optional middleware bundled
+with Connect add an additional 1143 SLOC, and are lazy loaded
+upon use.</p></setup></div></section><script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-25235225-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><a id="top" href="http://expressjs.com/faq.html#"><img src="./faq_files/arrow.png"></a><footer><div id="footer-content">© 2012 TJ Holowaychuk. All rights reserved.</div></footer></body></html>
